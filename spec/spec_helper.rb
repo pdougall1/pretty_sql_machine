@@ -1,7 +1,6 @@
 require 'bundler/setup'
 Bundler.setup
-
-require 'pretty_sql_machine' # and any other gems you need
+Dir["#{File.dirname(__FILE__)}/../**/*.rb"].each { |f| require(f) }
 
 RSpec.configure do |config|
   # some (optional) config here
