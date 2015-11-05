@@ -1,8 +1,12 @@
 require 'delegate'
 
 class SqlPhrases < SimpleDelegator
-  def initialize sql_string
-    @sql_string = sql_string
+  def initialize sql_query
+    begin
+      @sql_string = sql_query.to_sql
+    rescue NoMethodError
+      raise ArgumentError, "#{sql_query} must respont to to_sql."
+    end
     super(parsed_sql)
   end
 
