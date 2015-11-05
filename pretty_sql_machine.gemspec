@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["pdougall1@gmail.com"]
 
   spec.summary       = %q{Print your to_sql return in a much more readable way.}
-  spec.description   = %q{Print your to_sql return in a much more readable way.}
+  spec.description   = %q{Print your to_sql return in a much more readable way.  Just require it in the console and pass in an AR query!}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -26,9 +26,9 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.add_dependency "pygments.rb", "~> 0.6.3"
+  spec.add_dependency "pygments.rb", "~> 0.6"
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec", "~> 3.3"
 end
