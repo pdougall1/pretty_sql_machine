@@ -1,13 +1,14 @@
 require 'delegate'
 
 class SqlPhrases < SimpleDelegator
-  def initialize sql_query
+  def initialize(sql_query, decorator: SqlDecorator)
     begin
       @sql_string = sql_query.to_sql
     rescue NoMethodError
       raise ArgumentError, "#{sql_query} must respont to to_sql."
     end
-    super(parsed_sql)
+    decorated_sql = decorator.new(parsed_sql)
+    super(decorated_sql)
   end
 
   def parsed_sql

@@ -1,0 +1,8 @@
+---
+- "\e[34mFROM\e[39;49;00m \e[39;49;00mprojects\e[39;49;00m"
+- "\e[34mINNER\e[39;49;00m \e[39;49;00m\e[34mJOIN\e[39;49;00m \e[39;49;00mproject_user_roles\e[39;49;00m"
+- "\e[34mON\e[39;49;00m \e[39;49;00mprojects\e[39;49;00m.\e[39;49;00mid\e[39;49;00m
+  \e[39;49;00m=\e[39;49;00m \e[39;49;00mproject_user_roles\e[39;49;00m.\e[39;49;00mproject_id\e[39;49;00m"
+- "\e[34mSELECT\e[39;49;00m \e[39;49;00mprojects\e[39;49;00m.\e[39;49;00m*\e[39;49;00m"
+- "\e[34mWHERE\e[39;49;00m \e[39;49;00mproject_user_roles\e[39;49;00m.\e[39;49;00muser_id\e[39;49;00m
+  \e[39;49;00m=\e[39;49;00m \e[39;49;00m\e[34m1\e[39;49;00m"

@@ -7,7 +7,7 @@ module PrettySqlMachine
     phrases = SqlPhrases.new(sql_string)
     puts ''
     puts ''
-    phrases.each { |phrase| puts Pygments.highlight(phrase, style: 'vim', lexer: 'sql', formatter: 'console') }
+    phrases.each { |phrase| puts phrase }
     puts ''
     puts ''
     phrases
